@@ -16,10 +16,10 @@ inputText.addEventListener('blur', () => {
 
     const validator = Number(inputText.getAttribute('data-length'));
 
-    if(validator >= inputText.value.length){
-        inputText.classList.add('invalid');
-    } else {
-        inputText.classList.remove('invalid');
+    if(validator === inputText.value.length){
         inputText.classList.add('valid');
+    } else {
+        inputText.classList.remove('valid');
+        inputText.classList.add('invalid');
     }
 })
